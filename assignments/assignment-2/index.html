@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
-<html lang=""eng>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Professional webiste and profile of Phillip Davis">
-    <meta name="keywords" contents="Software Developement,Phillip Davis, Resume, HTML, Python, C++, SFSU, San Francisco State University, San Francisco">
-    <meta name="author" contents="Phillip Davis">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="Software Developement,Phillip Davis, Resume, HTML, Python, C++, SFSU, San Francisco State University, San Francisco">
+    <meta name="author" content="Phillip Davis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phillip Davis - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/baybridge.jpeg">
 </head>
 
 <main>
     <h1>Phillip Davis</h1>
-    <img src ="images/profile.jpg" alt="Phillip Davis's profile picture" width="13%"  heigh: auto>
+    <img src ="images/profile.jpg" alt="Phillip Davis's profile picture" width="13%">
     <p>&copy; 2025 Phillip Davis &bull; All rights reserved</p>
 
     <h2>About me</h2>
@@ -39,14 +39,16 @@
 
     <section id="education">
         <h2>Education</h2>
+        <img src ="images/sfsuLogo.jpeg" alt="SFSU Logo" width="7%">
         <ul><!--embeds school logo-->
-            <img src ="images/sfsuLogo.jpeg" alt="SFSU Logo" width="7%"  heigh: auto>
+            
             <li style="font-size: 18px;">San Francsico State University
             
             <ul>
                 <li>Major: Computer Science</li>
                 <li>Expected Graduation 2026</li>
             </ul>
+        </ul>
             <table style="border: 1px solid;
             border-radius: 10px;
             border-collapse:separate;">
@@ -64,14 +66,17 @@
                 </tr>
             </table>
             </li>
+        
             <br><br>
             <!--embeds school logo-->
-            <img src ="images/dvcLogo.jpeg" alt="DVC Logo" width="7%"  heigh: auto>
+            <img src ="images/dvcLogo.jpeg" alt="DVC Logo" width="7%">
+        <ul>
             <li style ="font-size: 18px;">Diablo Valley College
                 <ul>
                     <li>Computer Science and Sound Engineering</li>
                     <li>Graduated Spring 2024</li>   
                 </ul> 
+        </ul>
                 <!--createds rounded table border-->
                 <table style="border: 1px solid;
                 border-radius:10px;
@@ -93,7 +98,7 @@
                 </tr>
                 </table>            
             </li>
-        </ul>
+        
     </section>
 
     <section id = "experience">
@@ -117,7 +122,7 @@
                     </tr>
                     <tr>
                         <td>Developing Software products to collect data from management software APIs <br>to automate tasks and push logs to elastic search.</td>
-                    </tr>>
+                    </tr>
                     <tr>
                         <td>Creating pipelines from Kafka to Azure Data Lake for UEBA development using Mage. </td>
                     </tr>    
@@ -128,7 +133,7 @@
                         <td>Working with Venders and Clients to plan, configure, and deploy software solutions. <br>Including Vendor negotiations leading to $100,000 of annual savings for the client.</td>
                     </tr>
                     
-                    </ul>
+                
                 </table>
                 
             <h3><li>5 additional years at providing technical support for companies in various fields <br>including biotech, medical, and advertising.</li></h3>
@@ -149,16 +154,12 @@
         <article>
             <h3>Automating device restarts via database collation between Jamf and Zscaler APIs</h3>
             <!--embeds project screenshot-->
-            <img src="images/jamfzscaler.jpg" alt="Jamf Zscaler project screenshot" width="50%" height="auto">
+            <img src="images/jamfzscaler.jpg" alt="Jamf Zscaler project screenshot" width="50%">
             <p>Using the APIs for Jamf and Zscaler I pull active devices from both portals to json files. Then from the zscaler<br>
             list there is a field that only refreshes if the device is restarted. I compare this time to the local system time<br>
             and remove any  devices from the list that have been restarted in the last week. Between the two lists there is no data that matches<br>
             so I edit the user info in both lists to create a standard user name to match up the data. Then I can find the Jamf devices<br>
             that need to be restarted and trigger the restarts via the Jamf API. </p>
-        </article>
-
-        <article>
-            <h3></h3>
         </article>
     </section>
 
@@ -181,7 +182,7 @@
         <!--creates contact form-->
         <form>
             <input type="text" placeholder="Name"><br><br>
-            <input type="text" placeholder="Email"><br><br>
+            <input type="email" placeholder="Email"><br><br>
             <input type="text" placeholder="Subject"><br><br>
             <input type="text" placeholder="Message" style="height: 150px;width: 300px;"><br><br>
             <input type="submit" value="Submit">

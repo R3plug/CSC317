@@ -14,7 +14,7 @@ This project involved making a personal website/portfolio with html and minimal 
 
 
 ## Approach / What I Did:
-When struturoing the project I tried to keep sections distinct both in the html and rendered in the browser to make review easy. Using lists and tables to clearly define and organize sections and varios header styles to separate sections. When it came to embedding google maps and youtube it was not as simple as of some sources made it out to be. I tried to implement both myself but could not get it to work. Even youtubes html that it provides for embedding videos does not work. This was not a huge issue as I did not record an intro video and the embedded video was a joke. 
+When struturoing the project I tried to keep sections distinct both in the html and rendered in the browser to make review easy. Using lists and tables to clearly define and organize sections and varios header styles to separate sections. When it came to embedding google maps and youtube it was not as simple as of some sources made it out to be. I tried to implement both myself but could not get it to work. Even youtubes html that it provides for embedding videos does not work. This was not a huge issue as I did not record an intro video and the embedded video was a joke. When checking html with W3 it did not like setting the width of images as stated in the project. Left it in as it does format correctly and is requested in the project description.
 
 
 
@@ -48,6 +48,16 @@ The nav sections links the rest of the project to a menu at the top. tags are se
         
     </nav>
 
-Creates a contact form
+Creates a contact form andin some browsers will verify that the email is valid
 '''html
- 
+ <section id="contact">
+        <h2>Contact</h2>
+        <!--creates contact form-->
+        <form>
+            <input type="text" placeholder="Name"><br><br>
+            <input type="email" placeholder="Email"><br><br>
+            <input type="text" placeholder="Subject"><br><br>
+            <input type="text" placeholder="Message" style="height: 150px;width: 300px;"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
