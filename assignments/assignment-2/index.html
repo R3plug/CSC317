@@ -22,6 +22,7 @@
        Graduation 2026
     </p>
 
+    <!--Navagation list for sections-->
     <nav>
         <ul>
             <li><a href="#education">Education</a></li>
@@ -39,7 +40,7 @@
 
     <section id="education"></section>
         <h2>Education</h2>
-        <ul>
+        <ul><!--embeds school logo-->
             <img src ="images/sfsuLogo.jpeg" alt="SFSU Logo" width="7%"  heigh: auto>
             <li style="font-size: 18px;">San Francsico State University
             
@@ -65,12 +66,14 @@
             </table>
             </li>
             <br><br>
+            <!--embeds school logo-->
             <img src ="images/dvcLogo.jpeg" alt="DVC Logo" width="7%"  heigh: auto>
             <li style ="font-size: 18px;">Diablo Valley College
                 <ul>
                     <li>Computer Science and Sound Engineering</li>
                     <li>Graduated Spring 2024</li>   
                 </ul> 
+                <!--createds rounded table border-->
                 <table style="border: 1px solid;
                 border-radius:10px;
                 border-collapse:separate;">
@@ -98,7 +101,7 @@
         <ol>
             <h3><li>Zenitech Computer Solutions &emsp; &emsp; &emsp; 2019-Current</li></h3>
                 <h4>Junior Software Engineer <br> Lead Apple, Mobile, and Executive Support</h4>
-
+                <!--creates rounded table border-->
                 <table style="border: 1px solid;
                 border-radius:10px;
                 border-collapse:separate;">
@@ -138,20 +141,41 @@
             <li>Rock Climbing</li>
             <li>Play Saxophone and Guitar</li>
         </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <article>
+            <h3>Automating device restarts via database collation between Jamf and Zscaler APIs</h3>
+            <!--embedsproject screenshot-->
+            <img src="images/jamfzscaler.jpg" alt="Jamf Zscaler project screenshot" width="50%" height="auto">
+            <p>Using the APIs for Jamf and Zscaler I pull active devices from both portals to json files. Then from the zscaler<br>
+            list there is a field that only refreshes if the device is restarted. I compare this time to the local system time<br>
+            and remove any  devices from the list that have been restarted in the last week. Between the two lists there is no data that matches<br>
+            so I edit the user info in both lists to create a standard user name to match up the data. Then I can find the Jamf devices<br>
+            that need to be restarted and trigger the restarts via the Jamf API. </p>
+        </article>
+
+        <article>
+            <h3></h3>
+        </article>
 
     </section>
     <section id="intro">
         <h2>Intro Video</h2>
+        <!--embeds youtube video-->
         <div class="preview" style="visibility: hidden"></div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=hw5JZr_0bemB7OS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
     </section>
     <section id="location">
+        <!--embeds map-->
         <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=94114&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlecoder" rel="nofollow" href="https://kbj9qpmy.com/bp" id="get-map-data">Internet Provider</a><style>#google-maps-display img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>  
     </section>
     <section id="contact">
         <h2>Contact</h2>
+        <!--creates contact form-->
         <form>
             <input type="text" placeholder="Name"><br><br>
             <input type="text" placeholder="Email"><br><br>
