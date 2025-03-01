@@ -1,0 +1,164 @@
+/* 
+  UML-Diagram-Inspired Styles 
+  ---------------------------
+  This stylesheet gives your webpage the appearance of distinct "boxes"
+  (akin to UML classes or elements) with clear borders and segmented
+  headings.
+*/
+
+/* Basic reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Aileron', Arial, sans-serif;
+    background-color: #f9f9f9; 
+    color: #333;
+    line-height: 1.5;
+    padding: 1em;
+  }
+  
+  /* Center main content and give some max-width */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  /* Global headings style */
+  h1, h2, h3, h4 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  /* UML-like box styling for sections */
+  section {
+    border: 2px solid #000;      /* Sharp black border */
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 1em 0;
+    padding: 1em;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Each section's heading has an extra border to appear UML-like */
+  section > h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+  }
+  
+  /* "Class-like" styling for ordered/unordered lists inside sections */
+  section ul, section ol {
+    list-style-position: inside;
+    margin: 1em 0;
+    padding-left: 1em;
+  }
+  
+  /* Navigation list to look segmented */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    list-style: none;
+    padding-left: 0;
+    margin: 1em 0;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0.5em;
+  }
+  
+  nav li {
+    border-right: 1px solid #000;
+    padding: 0 1em;
+  }
+  nav li:last-child {
+    border-right: none;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tables styled like UML compartments */
+  table {
+    width: 100%;
+    margin: 1em 0;
+    border: 2px solid #000;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 4px;
+  }
+  
+  th, td {
+    padding: 0.75em;
+    border-bottom: 1px solid #000;
+  }
+  
+  th {
+    text-align: left;
+    background-color: #e6e6e6;
+    font-weight: bold;
+  }
+  
+  tr:last-child td {
+    border-bottom: none; /* Remove bottom border on last row */
+  }
+  
+  /* Images that should appear UML-like can have a subtle border */
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0.5em auto;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Example: rounding one specific image by class name if desired */
+  .rounded {
+    border-radius: 50%;
+    border: 2px solid #666;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    margin: 2em 0 1em 0;
+    font-size: 0.9em;
+  }
+  
+  /* Contact form styling */
+  form {
+    margin-top: 1em;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #666;
+    border-radius: 4px;
+  }
+  
+  form input[type="submit"] {
+    border: 2px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #f0f0f0;
+  }
+  
