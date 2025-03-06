@@ -145,23 +145,41 @@
     <section id="extracurricular">
         <h2>Extra Curriculars</h2>
         <ul>
-            <li>Learning to Surf</li>
+            <li>Surfing</li>
             <li>Rock Climbing</li>
-            <li>Play Saxophone and Guitar</li>
+            <li>Saxophone and Guitar</li>
         </ul>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <article>
-            <h3>Automating device restarts via database collation between Jamf and Zscaler APIs</h3>
+        <div>
+            <article>
+                <h3>Automating device restarts via database collation between Jamf and Zscaler APIs</h3>
+            
+                <p>Using the APIs for Jamf and Zscaler I pull active devices from both portals to json files. Then from the zscaler
+                list there is a field that only refreshes if the device is restarted. I compare this time to the local system time
+                and remove any  devices from the list that have been restarted in the last week. Between the two lists there is no data that matches
+                so I edit the user info in both lists to create a standard user name to match up the data. Then I can find the Jamf devices
+                that need to be restarted and trigger the restarts via the Jamf API. </p>
+            </article>
+            <article>
+                <h3>Pipelines</h3>
+                <p>
+                    Created data pipelines from kafka to batch stream messages to Azure blob storage usine Mage. Performed
+                    basic data cleaning enroute to adhere to data standards.
+                </p>
+            </article>
+            <article>
+                <h3>Cache Manager</h3>
+                <p>
+                    Created cache manager in C++ utilizing a FIFO list, BST, and Hashtable to allow for tracking of data
+                    delete when reaching max size, easily access data points and run queries on data by key attirbutes.
+                </p>
+            </article>
+
+        </div>
         
-            <p>Using the APIs for Jamf and Zscaler I pull active devices from both portals to json files. Then from the zscaler<br>
-            list there is a field that only refreshes if the device is restarted. I compare this time to the local system time<br>
-            and remove any  devices from the list that have been restarted in the last week. Between the two lists there is no data that matches<br>
-            so I edit the user info in both lists to create a standard user name to match up the data. Then I can find the Jamf devices<br>
-            that need to be restarted and trigger the restarts via the Jamf API. </p>
-        </article>
     </section>
 
     <section id="contact">
