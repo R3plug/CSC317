@@ -9,21 +9,32 @@
     <title>Phillip Davis - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/baybridge.jpeg">
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.cdnfonts.com/css/aileron" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <main>
-    <h1>Phillip Davis</h1>
-    <img src ="images/profile.jpg" alt="Phillip Davis's profile picture" class="rounded">
-    <p>&copy; 2025 Phillip Davis &bull; All rights reserved</p>
-
-    <h2>About me</h2>
-    <p>I am a Software engineering student at SFSU with 10+ years experience providing IT services to a variety of industries. <br>I currently lead Mobile and Executive support for Zenitech Computer Solutions where I support several<br> national clients as well as assisting with development of data pipelines for a UEBA based AI security software.
-
-    <p>I was born in New York City and grew up in Oakland Californa<br>
-       Currently a Computer Science Major SFSU<br>
-       Graduation 2026
-    </p>
+    <header>
+        <h1>Phillip Davis</h1>
+        <img src ="images/profile.jpg" alt="Phillip Davis's profile picture" class="rounded">
+        <div class = "top-bar">
+            <p>&copy; 2025 Phillip Davis &bull; All rights reserved</p>
+        </div>
+        
+    </header>
+    
+    <div id= "aboutme">
+        <h2>About me</h2>
+        <p>I am a Software engineering student at SFSU with 10+ years experience providing IT services to a variety of industries. 
+            <br>I currently lead Mobile and Executive support for Zenitech Computer Solutions where I support several
+            <br> national clients as well as assisting with development of data pipelines for a UEBA based AI security software.
+        </p>
+    </div>
+    
 
     <!--Navagation list for sections-->
     <nav>
@@ -32,7 +43,6 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#extracurricular">Extra Curriculars</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#location">Location</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         
@@ -50,9 +60,7 @@
                 <li>Expected Graduation 2026</li>
             </ul>
         </ul>
-            <table style="border: 1px solid;
-            border-radius: 10px;
-            border-collapse:separate;">
+            <table>
                 <tr>
                     <th>Relevant Coursework</th>
                 </tr>
@@ -79,9 +87,7 @@
                 </ul> 
         </ul>
                 <!--createds rounded table border-->
-                <table style="border: 1px solid;
-                border-radius:10px;
-                border-collapse:separate;">
+                <table>
                 <tr>
                     <th>Relevant Coursework</th>
                 </tr>
@@ -108,9 +114,7 @@
             <h3><li>Zenitech Computer Solutions &emsp; &emsp; &emsp; 2019-Current</li></h3>
                 <h4>Junior Software Engineer <br> Lead Apple, Mobile, and Executive Support</h4>
                 <!--creates rounded table border-->
-                <table style="border: 1px solid;
-                border-radius:10px;
-                border-collapse:separate;">
+                <table>
 
                     <tr>
                         <th>Job Exeperience</th>
@@ -162,11 +166,6 @@
             so I edit the user info in both lists to create a standard user name to match up the data. Then I can find the Jamf devices<br>
             that need to be restarted and trigger the restarts via the Jamf API. </p>
         </article>
-    </section>
-
-    <section id="location">
-        <!--embeds map-->
-        <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=94114&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlecoder" rel="nofollow" href="https://kbj9qpmy.com/bp" id="get-map-data">Internet Provider</a><style>#google-maps-display img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>  
     </section>
 
     <section id="contact">

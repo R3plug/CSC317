@@ -1,0 +1,221 @@
+/* ------------- Global Resets & Basic Styling ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aileron', sans-serif; /* if not available, fallback to sans-serif */
+}
+
+html, body {
+    background-color: #121212; 
+    color: #f5f5f5;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------- Main Layout ------------- */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ------------- Perfectly Round Profile Image ------------- */
+img.rounded {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto; /* centers the image */
+
+    /* Hover animation */
+    transition: transform 0.3s ease-in-out;
+}
+img.rounded:hover {
+    transform: scale(1.05); /* subtle scale up on hover */
+}
+
+/* ------------- Headings & Text ------------- */
+h1, h2, h3, h4 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+p, li {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+p a {
+    color: #ffab40;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+p a:hover {
+    color: #ffc107; /* lighter accent on hover */
+    text-decoration: underline;
+}
+
+/* ------------- Navigation ------------- */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #ffab40;
+    text-decoration: none;
+    /* Add a transition for hover effects */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffc107; 
+    transform: scale(1.05);
+}
+
+/* ------------- Tables ------------- */
+table {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: #1e1e1e;
+    border-spacing: 0;
+    border: 1px solid #333;
+    border-radius: 10px; /* some browsers need additional properties for perfect rounding */
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+    color: #ffffff;
+}
+
+td {
+    color: #cccccc;
+}
+
+/* Highlight entire row on hover */
+tbody tr {
+    transition: background-color 0.2s, transform 0.2s;
+}
+tbody tr:hover {
+    background-color: #2b2b2b;
+    transform: scale(1.01); /* subtle hover effect */
+}
+
+/* ------------- Lists ------------- */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ------------- Forms ------------- */
+form {
+    margin: 1rem 0;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #f5f5f5;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Subtle highlight on hover and focus */
+form input[type="text"]:hover,
+form input[type="email"]:hover {
+    border-color: #ffab40;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 5px #ffc107;
+}
+
+/* Submit button */
+form input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ffab40;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* ------------- Footer ------------- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    margin-top: 2rem;
+}
+
+/* ------------- Responsive Design ------------- */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
