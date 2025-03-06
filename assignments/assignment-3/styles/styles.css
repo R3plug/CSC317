@@ -4,6 +4,7 @@
     --border-radius:10px;
     --font-heading:'Markazi Text',serif;
     --font-body:'Faustina',serif;
+    --left-padding:40px;
 }
 
 .markazi-text-body-font {
@@ -30,7 +31,9 @@ img.rounded {
 html, body {
     margin: 0;
     padding: 0;
+    background-color: var(--secondary-color);
 }
+
 header{
     font-family: var(--font-heading);
     background-color: var(--primary-color);
@@ -60,25 +63,43 @@ h1{
 h2{
     font-family:var(--font-heading);
     font-size: 40px;
+    margin:0;
+    padding:0;
+}
+h3{
+    font-family:var(--font-heading);
+    font-size: 25px;
 }
 p{
     font-family: var(--font-body);
+    padding-left: var(--left-padding);
 }
 #aboutme{
     display: flex;
     flex-direction: column;
     place-items: center;
     row-gap: 5px;
+    background-color: white;;
 
+}
+#aboutme>h2{
+    padding-top:30px;
+    
 }
 
 nav{
     background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    margin:0;
+    padding:0;
 }
 nav>ul{
     list-style-type: none;
     display:flex; 
     place-content: center;
+    flex-wrap: wrap;
+    
+    
 }
 
 nav>ul>li{
@@ -109,4 +130,101 @@ nav>ul>li>a{
     display:grid;
     place-items: center;
     
+}
+ul{
+    margin:0;
+}
+section{
+    margin: 0;
+    padding: 0;
+}
+#education{
+    margin:0;
+    padding-top:0;
+    padding-left:var(--left-padding);
+    border-top:0;
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+}
+
+#sfsu,#dvc{
+    display: flex;
+    flex-wrap:wrap;    
+    align-items: center;
+    gap:20px;
+    color:white;
+    padding-bottom: 30px;
+    
+}
+
+#sfsu>div>nav,#dvc>div>nav{
+    background-color: none;
+}
+#sfsu>div>nav>ul,#dvc>div>nav>ul{
+    display:flex;
+    padding: 15px;
+    background-color: none;
+    border-radius: var(--border-radius);
+    
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    position:relative;
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear,
+}
+
+#experience{
+    background: linear-gradient(0deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+    color:white;
+    padding-left: var(--left-padding);
+    padding-bottom: 30px;
+    
+
+}
+#experience>ol{
+    display: flex;
+    place-content: center;
+}
+
+#extracurricular{
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 75%);
+    color: white;
+    padding-bottom: 30px;
+    padding-left: var(--left-padding);
+
+}
+#projects{
+    background: linear-gradient(0deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+    color:white;
+    padding-bottom:50px;
+    padding-left: var(--left-padding);
+}
+#contact{
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+    margin: 0;
+    padding: 0;
+
+}
+form>div{
+    display:flex; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+
+form>div>input{
+    padding-right:50px;
+    margin-right:60px;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color:white;
+}
+footer>p>a{
+    color:white;
+    text-decoration: none;
 }

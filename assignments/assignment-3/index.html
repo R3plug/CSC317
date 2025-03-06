@@ -50,61 +50,58 @@
 
     <section id="education">
         <h2>Education</h2>
-        <img src ="images/sfsuLogo.jpeg" alt="SFSU Logo" width="7%" class="rounded">
-        <ul><!--embeds school logo-->
+        <div id="sfsu">
             
-            <li style="font-size: 18px;">San Francsico State University
-            
+          <div>
+            <img src="images/sfsuLogo.jpeg" alt="SFSU Logo" width="7%" class="rounded">
+          </div>
+          <div>
+            <h3>San Francisco State University</h3>
             <ul>
-                <li>Major: Computer Science</li>
-                <li>Expected Graduation 2026</li>
+              <li>Major: Computer Science</li>
+              <li>Expected Graduation 2026</li>
             </ul>
-        </ul>
-            <table>
-                <tr>
-                    <th>Relevant Coursework</th>
-                </tr>
-                <tr>
-                    <td>Data Structures</td>
-                </tr>
-                <tr>
-                    <td>Web Developement</td>
-                </tr>
-                <tr>
-                    <td>Advanced Data Strucutres</td>
-                </tr>
-            </table>
-            </li>
-        
-            <br><br>
-            <!--embeds school logo-->
-            <img src ="images/dvcLogo.jpeg" alt="DVC Logo" width="7%" class="rounded">
-        <ul>
-            <li style ="font-size: 18px;">Diablo Valley College
+          </div>
+          <h4>Relevant Coursework</h4>
+          <div>
+            <nav>
+                
                 <ul>
-                    <li>Computer Science and Sound Engineering</li>
-                    <li>Graduated Spring 2024</li>   
-                </ul> 
-        </ul>
-                <!--createds rounded table border-->
-                <table>
-                <tr>
-                    <th>Relevant Coursework</th>
-                </tr>
-                <tr>
-                    <td>Advanced Object-Oriented C++</td>
-                </tr>
-                <tr>
-                    <td>Advanced Object-Oriented Java</td>
-                </tr>
-                <tr>
-                    <td>Data Structures & Algorithms</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                </tr>
-                </table>            
-            </li>
+                    <li><a href="https://bulletin.sfsu.edu/courses/csc/#:~:text=CSC%C2%A0220%20Data%20Structures%20(Units%3A%203)">Data Structures</a></li>
+                    <li><a href ="https://bulletin.sfsu.edu/courses/csc/#:~:text=CSC%C2%A0317%20Introduction%20to%20Web%20Software%20Development%20(Units%3A%203)">Web Development</a></li>
+                    <li><a href="https://bulletin.sfsu.edu/courses/csc/#:~:text=CSC%C2%A0340%20Programming%20Methodology%20(Units%3A%203)">Advanced Data Structures</a> </li>
+                </ul>
+            </nav>
+                
+          </div>
+        </div>
+        <div id="dvc">
+            
+            <div>
+              <img src="images/dvcLogo.jpeg" alt="DVC Logo" width="7%" class="rounded">
+            </div>
+            <div>
+              <h3>Diablo Valley College</h3>
+              <ul>
+                <li>Major: Computer Science, Sound Engineering</li>     
+                <li>Graduated spring 2024</li>
+              </ul>
+            </div>
+            <h4>Relevant Coursework</h4>
+            <div>
+              <nav>
+                  
+                  <ul>
+                      <li><a href="https://dvc.elumenapp.com/catalog/DVC2024-2025Catalog/course,comsc200#mainContent">Advanced OOP C++</a></li>
+                      <li><a href ="https://dvc.elumenapp.com/catalog/DVC2024-2025Catalog/course,comsc256#mainContent">Advanced OOP Java</a></li>
+                      <li><a href="https://dvc.elumenapp.com/catalog/DVC2024-2025Catalog/course,comsc210#mainContent">Data Structures & Algorithms</a> </li>
+                      <li><a href="https://dvc.elumenapp.com/catalog/DVC2024-2025Catalog/course,comsc140#mainContent">Python</a> </li>
+                  </ul>
+              </nav>
+                  
+            </div>
+          </div>
+        
         
     </section>
 
@@ -158,8 +155,7 @@
         <h2>Projects</h2>
         <article>
             <h3>Automating device restarts via database collation between Jamf and Zscaler APIs</h3>
-            <!--embeds project screenshot-->
-            <img src="images/jamfzscaler.jpg" alt="Jamf Zscaler project screenshot" width="50%">
+        
             <p>Using the APIs for Jamf and Zscaler I pull active devices from both portals to json files. Then from the zscaler<br>
             list there is a field that only refreshes if the device is restarted. I compare this time to the local system time<br>
             and remove any  devices from the list that have been restarted in the last week. Between the two lists there is no data that matches<br>
@@ -172,11 +168,17 @@
         <h2>Contact</h2>
         <!--creates contact form-->
         <form>
-            <input type="text" placeholder="Name"><br><br>
-            <input type="email" placeholder="Email"><br><br>
-            <input type="text" placeholder="Subject"><br><br>
-            <input type="text" placeholder="Message" style="height: 150px;width: 300px;"><br><br>
-            <input type="submit" value="Submit">
+            <div>
+                <input type="text" placeholder="Name"><br><br>
+                <input type="email" placeholder="Email"><br><br>
+                <input type="text" placeholder="Subject"><br><br>
+            </div>
+            <div>
+                <input type="text" placeholder="Message" style="height: 150px;width: 300px;"><br><br>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
         </form>
     </section>
 
@@ -185,7 +187,7 @@
 
 <footer>
     <p>Author: Phillip Davis</p>
-    <p><a href="mailto:phillipwd95@gmail.com">phillipwd95@gmail.com</a></p>
+    <p><a href="mailto:phillipwd95@gmail.com">Email</a></p>
 </footer>
 
 </html>
