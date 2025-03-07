@@ -155,6 +155,11 @@ section{
     padding-bottom: 30px;
     
 }
+#sfsu>div,#dvc>div{
+    display:grid;
+    place-items: center;
+
+}
 
 #sfsu>div>nav,#dvc>div>nav{
     background-color: none;
@@ -181,10 +186,29 @@ section{
     padding-bottom: 30px;
     
 
+    
+
 }
 #experience>ol{
-    display: flex;
-    place-content: center;
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+
+}
+#experience>ol>li{
+    list-style-type: none;
+    border:solid;
+    border-color:white;
+    padding:40px;
+    max-width: 600px;
+    margin:30px;
+    border-radius: var(--border-radius);
+    
+
+}
+table,th,td{
+    border: 1px solid;
+    padding:5px;
 }
 
 #extracurricular{
@@ -201,8 +225,10 @@ section{
     list-style-type: none;
     display:flex;
     justify-content: space-evenly;
+    flex-wrap:wrap;
+    
     background-color: var(--primary-color);
-    padding:20px;
+    padding:10px;
     border-radius: var(--border-radius);
     max-width: 900px;
     
@@ -215,6 +241,7 @@ section{
     border-radius: var(--border-radius);
     background-color: var(--secondary-color);
     padding:30px;
+    margin:20px;
 
     box-shadow: 0 5px 5px rgb(35, 35, 35);
     position:relative;
@@ -271,10 +298,14 @@ form>div{
     padding: 30px;
 
 }
+input:focus{
+    border-color:black;
+}
 
 form>div>input{
     padding-right:50px;
     margin-right:60px;
+    margin:10px;
 }
 
 footer{
