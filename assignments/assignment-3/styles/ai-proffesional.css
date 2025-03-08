@@ -1,0 +1,229 @@
+/* ================================
+   Styles for Phillip Davis - Portfolio
+   ================================ */
+
+/* --- CSS Variables for easy customization --- */
+:root {
+    --primary-color: #2c3e50;       /* Dark blue/gray */
+    --secondary-color: #3498db;     /* Lighter accent blue */
+    --background-color: #fafafa;    /* Off-white background */
+    --text-color: #333;            /* Main text color */
+    --heading-font: "Markazi Text", serif;
+    --body-font: "Faustina", serif;
+  }
+  
+  /* --- Global Resets and Base Styles --- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* --- Header --- */
+  header {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #fff;
+    padding: 2rem 1rem;
+  }
+  
+  header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* --- Rounded Image Class --- */
+  img.rounded {
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 1rem 0;
+  }
+  
+  /* --- Top Bar (copyright, etc.) --- */
+  .top-bar {
+    font-size: 0.85rem;
+  }
+  
+  /* --- Main Container --- */
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* --- About Me --- */
+  #aboutme {
+    margin-bottom: 2rem;
+  }
+  
+  #aboutme h2 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  #aboutme p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* --- Navigation --- */
+  nav {
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* --- Sections (Education, Experience, etc.) --- */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  section h2 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  section h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #444;
+  }
+  
+  section h4 {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  /* --- Lists (ul, ol) --- */
+  ul,
+  ol {
+    margin-left: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* --- Tables --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 6px;  /* optional for a softer look */
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  /* --- Contact Form --- */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+  }
+  
+  form input[style],
+  form input[style]::-webkit-input-placeholder,
+  form input[style]::-moz-placeholder {
+    font-family: var(--body-font);
+  }
+  
+  form input[type="submit"] {
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--body-font);
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* --- Responsive Media Query (optional) --- */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    main {
+      margin: 1rem;
+    }
+  }
+  
