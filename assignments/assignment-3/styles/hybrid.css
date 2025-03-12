@@ -1,0 +1,384 @@
+/*  Hand-Written    edited  */
+:root{
+    --primary-color:#CADCFC;
+    --secondary-color: #00246B;
+    --border-radius:10px;
+    --font-heading:'Markazi Text',serif;
+    --font-body:'Faustina',serif;
+    --default-margin:2rem;
+    
+}
+/* Importing fonts*/
+.markazi-text-body-font {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .faustina-head-font {
+    font-family: "Faustina", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+
+/*rounding class for images*/
+img.rounded {
+    object-fit: cover;
+    border-radius:50%;
+    height:200px;
+    width: 200px;
+    
+}
+
+/*  ai-2    */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Markazi Text', serif;
+    color: var(--dark-text);
+    /* Subtle gradient referencing teal of the bay and golden tones */
+    background: linear-gradient(135deg, var(--secondary-color) 30%, var(--primary-color) 70%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-out;
+    margin:var(--default-margin);
+  }
+
+
+
+  /*    from Hand-written   edited  */
+  header{
+    font-family: var(--font-heading);
+    background-color: var(--primary-color);
+    display:grid;
+    grid-template-rows: 200px,400px, 100px;
+    place-items: center;
+    padding:30px;
+    
+    border-radius: var(--border-radius);
+    
+}
+
+/*    ai-2  edited    */
+
+section h2 {
+    font-family: 'Faustina', serif;
+    font-size: 1.75rem;
+    color: var(--bridge-orange);
+    margin: 1rem 0 0.5rem 0;
+    text-align: center;
+  }
+
+  /* About Me Section */
+  #aboutme {
+    background-color: rgba(253, 245, 230, 0.7); /* light-cream overlay */
+    padding: 1rem 2rem;
+    margin: var(--default-margin);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  #aboutme h2 {
+    font-family: 'Faustina', serif;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #aboutme p {
+    line-height: 1.6;
+  }
+
+    /* Navigation */
+    nav {
+        background-color: rgba(255,255,255, 0.9);
+        padding: 0.5rem;
+        margin: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        gap: 1rem;
+      }
+      
+      nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+      }
+      
+      nav ul li a:hover {
+        color: var(--dark-text);
+      }
+
+/*  Hand-written    Edited*/
+#education{
+    margin:var(--default-margin);
+    color: white;
+}
+
+
+#sfsu,#dvc{
+    display: flex;
+    flex-wrap:wrap;    
+    align-items: center;
+    gap:20px;
+    color:white;
+    padding-bottom: 30px;
+    margin:var(--default-margin)
+    
+}
+#sfsu>div,#dvc>div{
+    display:grid;
+    place-items: center;
+
+}
+
+#sfsu>div>nav,#dvc>div>nav{
+    background-color: none;
+    border-radius: var(--border-radius);
+}
+#sfsu>div>nav>ul,#dvc>div>nav>ul{
+    display:flex;
+    padding: 15px;
+    background-color: none;
+    border-radius: var(--border-radius);
+    
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    position:relative;
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear,
+}
+
+/*  AI-2    Edited  */
+section h2 {
+    font-family: 'Faustina', serif;
+    font-size: 1.75rem;
+    
+    margin: 1rem 0 0.5rem 0;
+    text-align: center;
+    color:white;
+  }
+
+  #experience{
+    color:white;
+  }
+  #experience ol {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+    
+}
+ /* Added  */
+ #experience>ol>li{
+    list-style-type: none;
+  }
+
+#experience h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+}
+
+#experience h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+/* Tables */
+table {
+    width: 20%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(253, 245, 230, 0.7);
+    display:flex;
+    align-items: center;
+    color:black;
+}
+
+table th, table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/*   Hand-Written taken from education and edited */
+#extracurricular>ul>li{
+    display:flex;
+    padding: 15px;
+    background-color: rgba(253, 245, 230, 0.7);
+    border-radius: var(--border-radius);
+    width:300px;
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    position:relative;
+    text-align: center;
+    margin:var(--default-margin);
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear,
+}
+#projects>div{
+    
+    
+    padding-bottom:50px;
+    padding-left: var(--left-padding);
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px;
+}
+
+#projects>div>article{
+    border:solid;
+    
+    background-color:rgba(253, 245, 230, 0.7) ;
+    display:grid;
+    place-items: center;
+    border-radius: var(--border-radius);
+    margin:20px;
+    padding:30px;
+    padding-right:30px;
+    max-width: 700px;
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+
+    
+}
+
+#contact>h2{
+    color:black;
+}
+/* AI-2 */
+form {
+    background-color: rgba(253, 245, 230, 0.85);
+    border-radius: 6px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: riseUp 0.8s ease forwards;
+  }
+  
+  form div {
+    margin-bottom: 1rem;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 80%;
+    max-width: 350px;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 5px rgba(209, 73, 11, 0.4);
+  }
+  
+  form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #b43c09;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dropDown {
+    0% {
+      transform: translateY(-15%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes riseUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    
+    form input[type="text"],
+    form input[type="email"] {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    table,
+    table th,
+    table td {
+      display: block;
+      width: 100%;
+    }
+  }
+  
