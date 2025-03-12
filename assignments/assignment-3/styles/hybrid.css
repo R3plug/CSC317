@@ -203,7 +203,7 @@ section h2 {
 
 /* Tables */
 table {
-    width: 20%;
+    max-width: 500px;
     border-collapse: collapse;
     margin: 1rem 0;
     border: 1px solid #ddd;
@@ -211,8 +211,7 @@ table {
     overflow: hidden;
     text-align: center;
     background-color: rgba(253, 245, 230, 0.7);
-    display:flex;
-    align-items: center;
+    
     color:black;
 }
 
