@@ -57,7 +57,7 @@ img.rounded {
     font-family: var(--font-heading);
     background-color: var(--primary-color);
     display:grid;
-    grid-template-rows: 200px 400px 100px;
+    grid-template-rows: 100px 200px 30px;
     place-items: center;
     padding:30px;
     

@@ -38,7 +38,7 @@ header{
     font-family: var(--font-heading);
     background-color: var(--primary-color);
     display:grid;
-    grid-template-rows: 200px 400px 100px;
+    grid-template-rows: 200px 200px 100px;
     place-items: center;
     
 }
