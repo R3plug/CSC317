@@ -11,14 +11,12 @@
 /* Importing fonts*/
 .markazi-text-body-font {
     font-family: "Markazi Text", serif;
-    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
   }
 
   .faustina-head-font {
     font-family: "Faustina", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     
@@ -59,7 +57,7 @@ img.rounded {
     font-family: var(--font-heading);
     background-color: var(--primary-color);
     display:grid;
-    grid-template-rows: 200px,400px, 100px;
+    grid-template-rows: 200px 400px 100px;
     place-items: center;
     padding:30px;
     
@@ -149,13 +147,11 @@ section h2 {
 }
 
 #sfsu>div>nav,#dvc>div>nav{
-    background-color: none;
     border-radius: var(--border-radius);
 }
 #sfsu>div>nav>ul,#dvc>div>nav>ul{
     display:flex;
     padding: 15px;
-    background-color: none;
     border-radius: var(--border-radius);
     
     box-shadow: 0 5px 5px rgb(35, 35, 35);
@@ -163,7 +159,7 @@ section h2 {
 
     transition:
       top 0.3s linear,
-      box-shadow 0.3s linear,
+      box-shadow 0.3s linear
 }
 
 /*  AI-2    Edited  */
@@ -240,7 +236,7 @@ table tr:hover {
 
     transition:
       top 0.3s linear,
-      box-shadow 0.3s linear,
+      box-shadow 0.3s linear
 }
 #projects>div{
     
