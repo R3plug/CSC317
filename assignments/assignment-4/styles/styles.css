@@ -1,0 +1,321 @@
+:root{
+    --primary-color:#CADCFC;
+    --secondary-color: #00246B;
+    --border-radius:10px;
+    --font-heading:'Markazi Text',serif;
+    --font-body:'Faustina',serif;
+    --left-padding:40px;
+}
+/* Importing fonts*/
+.markazi-text-body-font {
+    font-family: "Markazi Text", serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .faustina-head-font {
+    font-family: "Faustina", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*rounding class for images*/
+img.rounded {
+    object-fit: cover;
+    border-radius:50%;
+    height:200px;
+    width: 200px;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+header{
+    font-family: var(--font-heading);
+    background-color: var(--primary-color);
+    display:grid;
+    grid-template-rows: 200px 200px 100px;
+    place-items: center;
+    
+}
+/*adds border to header image*/
+header >img{
+    border-style: solid;
+    border-color:var(--secondary-color);  
+    margin-bottom: 30px;
+}
+
+h1{
+    font-size: 60px;
+}
+.secondary-background{
+    background-color: var(--secondary-color);
+}
+.top-bar{
+    background-color: var(--secondary-color);
+    color: white;
+    width:100%;
+}
+h2{
+    font-family:var(--font-heading);
+    font-size: 40px;
+    margin:0;
+    padding-bottom:40px;
+}
+h3{
+    font-family:var(--font-heading);
+    font-size: 25px;
+}
+p{
+    font-family: var(--font-body);
+    padding-left: var(--left-padding);
+}
+
+/*about me set up*/
+#aboutme{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    row-gap: 5px;
+    background-color: white;;
+
+}
+#aboutme>h2{
+    padding-top:30px;
+    
+}
+
+/*nav links set up*/
+nav{
+    background-color: var(--primary-color);
+    
+    margin:0;
+    padding:0;
+}
+nav>ul{
+    list-style-type: none;
+    display:flex; 
+    place-content: center;
+    flex-wrap: wrap;
+    margin:0;
+    
+    
+}
+
+nav>ul>li{
+    padding: 15px;
+    margin:20px;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    width:120px;
+    position:relative;
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear
+
+    
+}
+
+nav>ul>li:hover{
+    top:-5px;
+    box-shadow: 0 7px 7px rgb(35, 35, 35);
+}
+nav>ul>li>a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    display:grid;
+    place-items: center;
+    
+}
+
+section{
+    margin: 0;
+    padding: 0;
+}
+#education{
+    margin:0;
+    padding-top:0;
+    padding-left:var(--left-padding);
+    border-top:0;
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+}
+
+/*  wanted links to match nav   */
+#sfsu,#dvc{
+    display: flex;
+    flex-wrap:wrap;    
+    align-items: center;
+    gap:20px;
+    color:white;
+    padding-bottom: 30px;
+    
+}
+#sfsu>div,#dvc>div{
+    display:grid;
+    place-items: center;
+
+}
+
+#sfsu>div>nav,#dvc>div>nav{
+    
+    border-radius: var(--border-radius);
+}
+#sfsu>div>nav>ul,#dvc>div>nav>ul{
+    display:flex;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    position:relative;
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear
+}
+
+#experience{
+    background: linear-gradient(0deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+    color:white;
+    padding-left: var(--left-padding);
+    padding-bottom: 30px;
+    
+
+    
+
+}
+#experience>ol{
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+
+}
+#experience>ol>li{
+    list-style-type: none;
+    border:solid;
+    border-color:white;
+    padding:40px;
+    max-width: 600px;
+    margin:30px;
+    border-radius: var(--border-radius);
+    
+
+}
+table,th,td{
+    border: 1px solid;
+    padding:5px;
+}
+
+#extracurricular{
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 75%);
+    color: white;
+    padding-bottom: 30px;
+    padding-left: var(--left-padding);
+    padding-bottom: 100px;
+    
+    
+
+}
+#extracurricular>ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    
+    background-color: var(--primary-color);
+    padding:10px;
+    border-radius: var(--border-radius);
+    max-width: 900px;
+    
+    
+    
+}
+#extracurricular>ul>li{
+    border:solid;
+    border-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    padding:30px;
+    margin:20px;
+
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+    position:relative;
+
+    transition:
+      top 0.3s linear,
+      box-shadow 0.3s linear
+    
+    
+}
+#extracurricular>ul>li:hover{
+    top:-5px;
+    box-shadow: 0 7px 7px rgb(35, 35, 35);
+}
+#projects>h2{
+    color:white;
+    padding-left: var(--left-padding);
+}
+#projects>div{
+    background: linear-gradient(0deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 75%);
+    color:white;
+    padding-bottom:50px;
+    padding-left: var(--left-padding);
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px;
+}
+
+#projects>div>article{
+    border:solid;
+    border-color:white;
+    display:grid;
+    place-items: center;
+    border-radius: var(--border-radius);
+    margin:20px;
+    padding:30px;
+    padding-right:30px;
+    max-width: 700px;
+    box-shadow: 0 5px 5px rgb(35, 35, 35);
+
+    
+}
+#contact{
+    background: linear-gradient(180deg, rgba(202,220,252,1) 0%, rgba(0,36,107,1) 35%);
+    margin: 0;
+    padding: 0;
+    color:white;
+
+}
+form>div{
+    display:flex; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+input:focus{
+    border-color:black;
+}
+
+form>div>input{
+    padding-right:50px;
+    margin-right:60px;
+    margin:10px;
+}
+
+footer{
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color:white;
+}
+footer>p>a{
+    color:white;
+    text-decoration: none;
+}
