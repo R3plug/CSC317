@@ -19,7 +19,8 @@ const plus = document.getElementById("plus");
 const zero = document.getElementById("zero");
 const dot = document.getElementById("dot");
 const equals = document.querySelector(".equals");
-let equation ="";
+let equation ='';
+let num ='';
 const allowedKeys = [1,2,3,4,5,6,7,8,9,0,'.','Enter','/','*','+','-','=','%','Delete','click']
 
 const updateOutField= () =>{
@@ -27,6 +28,15 @@ const updateOutField= () =>{
 }
 const setInField = ()=>{
     inField.innerHTML =equation;
+}
+
+//if someone tries to start a new equation before clearing the last one it clears it first
+const clearChecker= ()=>{
+    if(inField.innerHTML!=''){
+        equation='';
+        updateOutField();
+        setInField();
+    }
 }
 
 document.addEventListener('keydown', function(event){
@@ -37,44 +47,63 @@ document.addEventListener('keydown', function(event){
 
 //click listeners
 one.addEventListener("click", function(e){
-    equation+='1';
+    clearChecker();
+    num+='1';
+    equation+='1'
     console.log(equation);
     updateOutField();
 })
 two.addEventListener("click", e=>{
+    clearChecker();
     equation+='2';
+    num+='2';
     updateOutField();
 })
 three.addEventListener("click", e=>{
+    clearChecker();
     equation+='3';
+    num+='3';
     updateOutField();
 })
 four.addEventListener("click", e=>{
+    clearChecker();
     equation+='4';
+    num+='4';
     updateOutField();
 })
 five.addEventListener("click", e=>{
+    clearChecker();
     equation+='5';
+    num+='5';
     updateOutField();
 })
 six.addEventListener("click", e=>{
+    clearChecker();
     equation+='6';
+    num+='6';
     updateOutField();
 })
 seven.addEventListener("click", e=>{
     equation+='7';
+    num+='7';
     updateOutField();
 })
 eight.addEventListener("click", e=>{
+    clearChecker();
     equation+='8';
+    num+='8';
     updateOutField();
 })
 nine.addEventListener("click", e=>{
+    clearChecker();
     equation+='9';
+    num+='9';
     updateOutField();
 })
 zero.addEventListener("click", e=>{
+    clearChecker();
     equation+='0';
+    num+='0';
     updateOutField();
 })
 dot.addEventListener("click", e=>{
@@ -83,28 +112,47 @@ dot.addEventListener("click", e=>{
 })
 divide.addEventListener("click", e=>{
     equation+='/';
+    num='';
     updateOutField();
 })
 multiply.addEventListener("click", e=>{
     equation+='*';
+    num='';
     updateOutField();
 })
 minus.addEventListener("click", e=>{
     equation+='-';
+    num='';
     updateOutField();
 })
 plus.addEventListener("click", e=>{
     equation+='+';
+    num='';
     updateOutField();
 })
 clear.addEventListener("click", e=>{
-    equation=''
+    equation='';
+    num='';
     updateOutField();
     setInField();
 })
 
 percent.addEventListener("click", e=>{
-    equation+='%'
+    let numLen = num.length;
+    let percent=(+num)/100;
+    equation =equation.slice(0,-numLen);
+    equation+= percent;
+    num = '';
+    updateOutField();
+    
+    
+})
+neg.addEventListener("click", e=>{
+    let numLen = num.length;
+    equation =equation.slice(0,-numLen);
+    num='(-'+num+')';
+    equation+=num;
+    num = '';
     updateOutField();
 })
 
@@ -118,5 +166,119 @@ equals.addEventListener("click", e=>{
     }
     
     updateOutField();
+})
+
+//keyboard listeners
+document.addEventListener("keydown", (event)=>{
+    switch(event.key){
+     case('1'):
+        clearChecker();
+        num+='1';
+        equation+='1'
+        console.log(equation);
+        updateOutField();
+        break;
+     case('2'):
+        clearChecker();
+        equation+='2';
+        num+='2';
+        updateOutField();
+        break;
+     case('3'):
+        clearChecker();
+        equation+='3';
+        num+='3';
+        updateOutField();
+        break;
+     case('4'):
+        clearChecker();
+        equation+='4';
+        num+='4';
+        updateOutField();
+        break;
+     case('5'):
+        clearChecker();
+        equation+='5';
+        num+='5';
+        updateOutField();
+        break;
+     case('6'):
+        clearChecker();
+        equation+='6';
+        num+='6';
+        updateOutField();
+        break;
+     case('7'):
+        clearChecker();
+        equation+='7';
+        num+='7';
+        updateOutField();
+        break;
+     case('8'):
+        clearChecker();
+        equation+='8';
+        num+='8';
+        updateOutField();
+        break;
+     case('9'):
+        clearChecker();
+        equation+='9';
+        num+='9';
+        updateOutField();
+        break;
+     case('0'):
+        clearChecker();
+        equation+='0';
+        num+='0';
+        updateOutField();
+        break;
+     case('+'):
+        equation+='+';
+        num='';
+        updateOutField();
+        break;
+     case('-'):
+        equation+='-';
+        num='';
+        updateOutField();
+        break;
+     case('/'):
+        equation+='/';
+        num='';
+        updateOutField();
+        break;
+     case('*'):
+        equation+='*';
+        num='';
+        updateOutField();
+        break;
+     case('%'):
+        let numLen = num.length;
+        let percent=(+num)/100;
+        equation =equation.slice(0,-numLen);
+        equation+= percent;
+        num = '';
+        updateOutField();
+        break;
+     case('Enter'):
+        setInField();
+        try{
+            equation = eval(equation);
+        }
+        catch{
+            outField.innerHTML ='Err';
+        }
+    
+        updateOutField();
+        break;
+     case('Escape'):
+        equation='';
+        num='';
+        updateOutField();
+        setInField();
+        break;
+     default:
+        break;      
+    }
 })
 
