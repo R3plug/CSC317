@@ -1,3 +1,8 @@
+:root{
+    --button-width:1rem;
+    --button-height:1rem;
+}
+
 html {
     margin:0;
     background-color: black;
@@ -16,8 +21,8 @@ main{
     display :grid;
     align-items: center;
     width:100%;
-    max-width: 800px;
-    max-height:1000px;
+    max-width: 600px;
+    max-height:675px;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap:.5rem;
@@ -54,8 +59,8 @@ main{
    justify-content: center;
    color:white;
    border-radius: 50%;
-   min-width: 1rem;
-   min-height:1rem;
+   width: var(--button-width);
+   height:var(--button-height);
    background-color: grey;
    padding: 40px;
    font-size: 3rem;
@@ -74,8 +79,8 @@ main{
     border-radius: 50%;
     background-color: rgb(44, 43, 43);
     padding: 40px;
-    max-width:1.75rem;
-    max-height:1.75rem;
+    width:var(--button-width);
+    height:var(--button-height);
     font-size: 3rem;
 }
 .num:active{
@@ -90,8 +95,8 @@ main{
     border-radius: 50%;
     background-color: darkorange;
     padding: 40px;
-    max-width:1.75rem;
-    max-height:1.75rem;
+    width:var(--button-width);
+    height:var(--button-height);
     font-size: 3rem;
 }
 .action:active{
@@ -114,5 +119,33 @@ main{
 
 .equals:active{
     background-color: rgb(252, 165, 58);
+}
+
+@media (max-width:465px){
+    .calculator{
+        grid-column-gap: .1rem;
+        grid-row-gap:.1rem;
+        margin:0; 
+    }
+    .IO{
+        font-size:5vw;
+    }
+    .num{
+        padding:7vw;
+        font-size:5vw;
+    }
+    .action{
+        padding:7vw;
+        font-size:5vw;
+    }
+    .func{
+        padding:7vw;
+        font-size:5vw;
+    }
+    .equals{
+        height:14vw;
+        width:36vw;
+        font-size: 5vw;
+    }
 }
 
