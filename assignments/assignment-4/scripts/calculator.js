@@ -21,18 +21,42 @@ const dot = document.getElementById("dot");
 const equals = document.querySelector(".equals");
 let equation ='';
 let num ='';
-const allowedKeys = [1,2,3,4,5,6,7,8,9,0,'.','Enter','/','*','+','-','=','%','Delete','click']
+
+const allowedKeys = ['0','1','2', '3','4','5','6','7','8','9','+','-','*','/','.', 'Enter','Escape','%'];
+
+document.addEventListener('keydown', function(event){
+    if (!allowedKeys.includes(event.key)) {
+      event.preventDefault();
+    }
+  });
+
+function secureEval(expression) {
+    // Only allow numbers, operators, parentheses, and decimal points
+    const safePattern = /^[0-9+\-*/%.() ]+$/;
+
+    if (!safePattern.test(expression)) {
+        throw new Error("Invalid characters in expression.");
+    }
+
+    try {
+        // eslint-disable-next-line no-new-func
+        return Function('"use strict"; return (' + expression + ')')();
+    } catch (e) {
+        throw new Error("Error evaluating expression.");
+    }
+}
+
 
 const updateOutField= () =>{
-    outField.innerHTML =equation;
+    outField.textContent =equation;
 }
 const setInField = ()=>{
-    inField.innerHTML =equation;
+    inField.textContent =equation;
 }
 
 //if someone tries to start a new equation before clearing the last one it clears it first
 const clearChecker= ()=>{
-    if(inField.innerHTML!=''){
+    if(inField.textContent!=''){
         equation='';
         updateOutField();
         setInField();
@@ -84,6 +108,7 @@ six.addEventListener("click", e=>{
     updateOutField();
 })
 seven.addEventListener("click", e=>{
+    clearChecker();
     equation+='7';
     num+='7';
     updateOutField();
@@ -108,6 +133,7 @@ zero.addEventListener("click", e=>{
 })
 dot.addEventListener("click", e=>{
     equation+='.';
+    num+='.';
     updateOutField();
 })
 divide.addEventListener("click", e=>{
@@ -159,13 +185,14 @@ neg.addEventListener("click", e=>{
 equals.addEventListener("click", e=>{
     setInField();
     try{
-        equation = eval(equation);
+        equation = secureEval(equation);
+        updateOutField();
     }
     catch{
         outField.innerHTML ='Err';
     }
     
-    updateOutField();
+    
 })
 
 //keyboard listeners
@@ -263,7 +290,7 @@ document.addEventListener("keydown", (event)=>{
      case('Enter'):
         setInField();
         try{
-            equation = eval(equation);
+            equation = secureEval(equation);
         }
         catch{
             outField.innerHTML ='Err';
