@@ -21,17 +21,19 @@ main{
     display :grid;
     align-items: center;
     width:100%;
-    max-width: 600px;
-    max-height:675px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 500px;
+    max-height:775px;
     grid-column-gap:.5rem;
     grid-row-gap:.5rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
     justify-items: center;
     align-items: center;
     
     
 }
+
 #in{
     grid-column: 1 /-1;
     grid-row: 1/2;
@@ -42,6 +44,7 @@ main{
     grid-column:1/-1;
     grid-row: 2 /3;
 }
+
 .IO {
     display: flex; 
     align-items: flex-end; 
@@ -53,6 +56,25 @@ main{
     
 }
 
+.memory {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color:white;
+    border-radius: 50%;
+    width: var(--button-width);
+    height:var(--button-height);
+    background-color: grey;
+    padding: 35px;
+    font-size: 2.5rem;
+    
+    
+ }
+
+ .memory:active{
+    background-color: rgb(163, 163, 163);
+}
+
 .func {
    display: flex; 
    align-items: center; 
@@ -62,8 +84,8 @@ main{
    width: var(--button-width);
    height:var(--button-height);
    background-color: grey;
-   padding: 40px;
-   font-size: 3rem;
+   padding: 35px;
+   font-size: 2.5rem;
    
    
 }
@@ -78,10 +100,10 @@ main{
     color:white;
     border-radius: 50%;
     background-color: rgb(44, 43, 43);
-    padding: 40px;
+    padding: 35px;
     width:var(--button-width);
     height:var(--button-height);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .num:active{
     background-color: rgb(87, 87, 87);
@@ -94,10 +116,10 @@ main{
     color:white;
     border-radius: 50%;
     background-color: darkorange;
-    padding: 40px;
+    padding: 35px;
     width:var(--button-width);
     height:var(--button-height);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .action:active{
     background-color: rgb(252, 165, 58);
@@ -107,13 +129,13 @@ main{
     align-items: center; 
     justify-content: center;
     grid-column: 3 /-1;
-    grid-row:7/-1;
+    grid-row:8/-1;
     color:white;
     background-color: darkorange;
     border-radius: 10px;
-    height:6rem;
+    height:5rem;
     width: 14rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     
 }
 

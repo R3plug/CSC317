@@ -19,6 +19,11 @@ const plus = document.getElementById("plus");
 const zero = document.getElementById("zero");
 const dot = document.getElementById("dot");
 const equals = document.querySelector(".equals");
+const memPlus = document.getElementById("memAdd");
+const memMinus = document.getElementById("memMinus");
+const memRecall = document.getElementById("memRecall");
+const memClear = document.getElementById("memClear");
+let mem = 0
 let equation ='';
 let num ='';
 
@@ -70,6 +75,25 @@ document.addEventListener('keydown', function(event){
 })
 
 //click listeners
+memPlus.addEventListener("click",e=>{
+    mem=mem+secureEval(outField.textContent);
+})
+
+memMinus.addEventListener("click", e=>{
+    mem =mem-secureEval(outField.textContent);
+})
+
+memRecall.addEventListener("click",e=>{
+    equation+=mem;
+    num+=mem;
+    updateOutField();
+    
+})
+
+memClear.addEventListener("click", e=>{
+    mem=0;
+})
+
 one.addEventListener("click", function(e){
     clearChecker();
     num+='1';
