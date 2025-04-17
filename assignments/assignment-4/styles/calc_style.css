@@ -153,10 +153,6 @@ header>a{
     background-color: rgb(252, 165, 58);
 }
 
-footer{
-    background-color: black;
-    color:white;
-}
 
 @media (max-width:465px){
     .calculator{
