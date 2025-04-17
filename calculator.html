@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "description" content = "Calculator app">
+    <meta name = "keywords" content = "Calculator, javascript, addition, subtraction, division, multiplication, CSS">
+    <meta name = "Author" content = "Phillip Davis">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Calculator</title>
+    <link rel="icon" type = "image-x-icon" href = "images\calc.png">
+    <link rel = "stylesheet" id = "css-theme" href = "styles\calc_style.css">
+    <script src="scripts\calculator.js" defer></script>
+</head>
+<style>
+    /* Theme Switcher Styling */
+    .theme-switcher {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        padding: 12px;
+        z-index: 1000;
+    }
+
+    .theme-switcher h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .theme-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .theme-button {
+        padding: 8px 12px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+    .theme-button:hover {
+        background-color: #e0e0e0;
+    }
+
+    .theme-button.active {
+        background-color: #007bff;
+        color: white;
+        border-color: #0069d9;
+    }
+</style>
+<header>
+    <a href="index.html">Home</a>
+</header>
+<main>
+    
+    <div class = "calculator">
+        
+        <div class = "IO" id = "in"></div>
+        <div class = "IO" id = "out"></div> 
+        <div class = "memory" id ="memAdd">M+</div> 
+        <div class = "memory" id ="memMinus">M-</div>
+        <div class = "memory" id ="memRecall">MR</div>
+        <div class = "memory" id ="memClear">MC</div>     
+        <div class = "func" id ="clear">AC</div>
+        <div class = "func" id ="neg">+/-</div>
+        <div class = "func" id ="percent">%</div>
+        <div class = "action" id = "divide"> /</div>
+        <div class = "num" id ="seven"> 7</div>
+        <div class = "num" id = "eight"> 8</div>
+        <div class = "num" id = "nine"> 9</div>
+        <div class = "action" id = "multiply"> X</div>
+        <div class = "num" id = "four" > 4</div>
+        <div class = "num" id = "five"> 5</div>
+        <div class = "num" id = "six"> 6</div>
+        <div class = "action" id = "minus"> -</div>
+        <div class = "num" id = "one"> 1</div>
+        <div class = "num" id = "two"> 2</div>
+        <div class = "num" id = "three"> 3</div>
+        <div class = "action" id = "plus"> +</div>
+        <div class = "num" id = "zero"> 0</div>
+        <div class = "num" id = "dot"> .</div>        
+        <div class = "equals">=</div>
+
+    </div>
+   
+    
+</main>
+
+
+<div class="theme-switcher">
+    <h3>Theme Switcher</h3>
+    <div class="theme-buttons">
+        <button class="theme-button active" data-theme="calc_style">Style One</button>
+        <button class="theme-button" data-theme="calc_style_hybrid1">Style Two</button>
+        
+        
+    </div>
+</div>
+
+<!-- Theme Switcher Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all theme buttons
+        const themeButtons = document.querySelectorAll('.theme-button');
+        // Get the stylesheet link element
+        const themeStylesheet = document.getElementById('css-theme');
+
+        // Function to set active theme
+        function setActiveTheme(themeName) {
+            // Update stylesheet href
+            themeStylesheet.href = `styles/${themeName}.css`;
+
+            // Update active button state
+            themeButtons.forEach(button => {
+                if (button.dataset.theme === themeName) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Save preference to localStorage
+            localStorage.setItem('preferredTheme', themeName);
+        }
+
+        // Add click event to all theme buttons
+        themeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const themeName = this.dataset.theme;
+                setActiveTheme(themeName);
+            });
+        });
+
+        // Check if there's a saved theme preference
+        const savedTheme = localStorage.getItem('preferredTheme');
+        if (savedTheme) {
+            setActiveTheme(savedTheme);
+        }
+    });
+</script>
+
+</html>
