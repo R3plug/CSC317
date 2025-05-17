@@ -34,7 +34,10 @@ a:hover {
 
 .rounded {
     border-radius: 50%;
-    width:30 px;
+    margin: 1rem auto;
+    display: block;
+    max-width: 200px;
+    width: 40%;
 }
 
 /* ---------------------------------------------------------------------
