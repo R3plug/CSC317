@@ -23,6 +23,7 @@ const memPlus = document.getElementById("memAdd");
 const memMinus = document.getElementById("memMinus");
 const memRecall = document.getElementById("memRecall");
 const memClear = document.getElementById("memClear");
+const home = document.getElementById("Home");
 let mem = 0
 let equation ='';
 let num ='';
@@ -51,6 +52,13 @@ function secureEval(expression) {
     }
 }
 
+home.addEventListener("click", e => {
+    // Remove the saved theme from localStorage
+    localStorage.removeItem('preferredTheme');
+  
+    // Reapply the default theme
+    document.getElementById('css-theme').href = 'styles/styles.css';
+});
 
 const updateOutField= () =>{
     outField.textContent =equation;
@@ -73,6 +81,7 @@ document.addEventListener('keydown', function(event){
         event.preventDefault();
     }
 })
+
 
 //click listeners
 memPlus.addEventListener("click",e=>{
@@ -331,5 +340,48 @@ document.addEventListener("keydown", (event)=>{
      default:
         break;      
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all theme buttons
+        const themeButtons = document.querySelectorAll('.theme-button');
+        // Get the stylesheet link element
+        const themeStylesheet = document.getElementById('css-theme');
+    
+        // Function to set active theme
+        function setActiveTheme(themeName) {
+            // Update stylesheet href
+            themeStylesheet.href = `styles/${themeName}.css`;
+    
+            // Update active button state
+            themeButtons.forEach(button => {
+                if (button.dataset.theme === themeName) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+    
+            // Save preference to localStorage
+            localStorage.setItem('preferredTheme', themeName);
+        }
+    
+        // Add click event to all theme buttons
+        themeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const themeName = this.dataset.theme;
+                setActiveTheme(themeName);
+            });
+        });
+    
+        // Check if there's a saved theme preference, if none, set default theme
+       // const savedTheme = localStorage.getItem('preferredTheme');
+       // if (savedTheme) {
+       //     setActiveTheme(savedTheme); // Apply saved theme
+       // } else {
+            setActiveTheme('calc_style'); // Apply default theme (assuming 'styles.css' is default)
+       // }
+    });
 })
+
+
 

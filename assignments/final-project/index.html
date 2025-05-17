@@ -8,53 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phillip Davis - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/baybridge.jpeg">
-    <link rel="stylesheet" href="styles/styles.css" id="css-theme">
+    <link rel="stylesheet" href="styles/ai-1.css" id="css-theme">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // Get all theme buttons
-        const themeButtons = document.querySelectorAll('.theme-button');
-        // Get the stylesheet link element
-        const themeStylesheet = document.getElementById('css-theme');
-    
-        // Function to set active theme
-        function setActiveTheme(themeName) {
-            // Update stylesheet href
-            themeStylesheet.href = `styles/${themeName}.css`;
-    
-            // Update active button state
-            themeButtons.forEach(button => {
-                if (button.dataset.theme === themeName) {
-                    button.classList.add('active');
-                } else {
-                    button.classList.remove('active');
-                }
-            });
-    
-            // Save preference to localStorage
-            localStorage.setItem('preferredTheme', themeName);
-        }
-    
-        // Add click event to all theme buttons
-        themeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const themeName = this.dataset.theme;
-                setActiveTheme(themeName);
-            });
-        });
-    
-        // Check if there's a saved theme preference, if none, set default theme
-        const savedTheme = localStorage.getItem('preferredTheme');
-        if (savedTheme) {
-            setActiveTheme(savedTheme); // Apply saved theme
-        } else {
-            setActiveTheme('styles'); // Apply default theme (assuming 'styles.css' is default)
-        }
-    });
-    </script>
     <style>
         /* Theme Switcher Styling */
         .theme-switcher {
@@ -101,7 +59,6 @@
         }
     </style>
 </head>
-
 
 <main>
     <header>
@@ -268,12 +225,6 @@
                     delete when reaching max size, easily access data points and run queries on data by key attirbutes.
                 </p>
             </article>
-            <article>
-                <a href = "calculator.html"><h3>Calculator</h3></a>
-                <p>
-                    Built a Calculator using HTML CSS and Javascript that uses input validation and memory functions.
-                </p>
-            </article>
 
         </div>
         
@@ -316,6 +267,47 @@
     </div>
 </div>
 
+<!-- Theme Switcher Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all theme buttons
+        const themeButtons = document.querySelectorAll('.theme-button');
+        // Get the stylesheet link element
+        const themeStylesheet = document.getElementById('css-theme');
+
+        // Function to set active theme
+        function setActiveTheme(themeName) {
+            // Update stylesheet href
+            themeStylesheet.href = `styles/${themeName}.css`;
+
+            // Update active button state
+            themeButtons.forEach(button => {
+                if (button.dataset.theme === themeName) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Save preference to localStorage
+            localStorage.setItem('preferredTheme', themeName);
+        }
+
+        // Add click event to all theme buttons
+        themeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const themeName = this.dataset.theme;
+                setActiveTheme(themeName);
+            });
+        });
+
+        // Check if there's a saved theme preference
+        const savedTheme = localStorage.getItem('preferredTheme');
+        if (savedTheme) {
+            setActiveTheme(savedTheme);
+        }
+    });
+</script>
 
 </html>
 

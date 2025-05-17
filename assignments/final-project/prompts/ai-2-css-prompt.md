@@ -1,0 +1,1 @@
+with this image and the provided html design a css stylesheet that captures the colors and feel of the photo uses light animations and a smooth form completion experience
